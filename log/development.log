@@ -361,3 +361,85 @@ Processing by TendersController#index as HTML
 Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 10305)
 
 
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 21:10:16 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.4ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 89.0ms | ActiveRecord: 0.9ms | Allocations: 27075)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-10 21:10:18 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 7.0ms | Allocations: 2795)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 1.1ms | Allocations: 10107)
+
+
+Started POST "/tenders" for 127.0.0.1 at 2019-12-10 21:10:23 +0530
+Processing by TendersController#create as HTML
+  Parameters: {"authenticity_token"=>"VmDIjFyqRO3nT7ZekYHvRry4np7nQhebGwj7Ib89/geki35xIMET8ePmGiho3TwN8Y9idmWIr63yjebyfOwhTw==", "tender"=>{"title"=>"sdsd", "body"=>"sdsds"}, "commit"=>"Create Tender"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tenders_controller.rb:30:in `block in create'
+  [1m[36mTender Create (0.3ms)[0m  [1m[32mINSERT INTO `tenders` (`title`, `body`, `created_at`, `updated_at`) VALUES ('sdsd', 'sdsds', '2019-12-10 15:40:23.933114', '2019-12-10 15:40:23.933114')[0m
+  ↳ app/controllers/tenders_controller.rb:30:in `block in create'
+  [1m[35m (101.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tenders_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/tenders/2
+Completed 302 Found in 116ms (ActiveRecord: 101.5ms | Allocations: 2985)
+
+
+Started GET "/tenders/2" for 127.0.0.1 at 2019-12-10 21:10:24 +0530
+Processing by TendersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTender Load (0.4ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/tenders_controller.rb:67:in `set_tender'
+  Rendering tenders/show.html.erb within layouts/application
+  Rendered tenders/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 21:10:26 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.3ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.3ms | Allocations: 4630)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-10 21:10:52 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 4451)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-10 21:12:50 +0530
+Processing by PagesController#home as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2173)
+
+
+  
+NameError (uninitialized constant PagesController::Blog):
+  
+app/controllers/pages_controller.rb:3:in `home'
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-10 21:13:18 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mTender Load (0.3ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` LIMIT 11[0m
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3929)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 1.3ms | Allocations: 9074)
+
+
