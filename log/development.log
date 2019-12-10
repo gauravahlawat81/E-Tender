@@ -1,928 +1,363 @@
-
-
-Started GET "/" for 127.0.0.1 at 2019-12-04 23:42:38 +0530
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /usr/lib/ruby/vendor_ruby/rails/templates/rails/welcome/index.html.erb (1.4ms)
-Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2019-12-05 13:31:47 +0530
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /usr/lib/ruby/vendor_ruby/rails/templates/rails/welcome/index.html.erb (0.1ms)
-Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:37:19 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (6.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (20.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (34.8ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:39:48 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (25.3ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:40:00 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (26.5ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:41:32 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (10.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (15.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (30.1ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:41:36 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (29.4ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:41:38 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (25.2ms)
-
-
-Started GET "/posts/index" for 127.0.0.1 at 2019-12-05 13:41:43 +0530
-
-ActionController::RoutingError (No route matches [GET] "/posts/index"):
+Started GET "/" for 127.0.0.1 at 2019-12-10 16:46:39 +0530
   
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (24.4ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:41:46 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (33.0ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:44:01 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (4.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (30.8ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:44:03 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (11.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (25.0ms)
-
-
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:44:11 +0530
-
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (26.2ms)
-
-
-Started GET "/" for 127.0.0.1 at 2019-12-05 13:44:16 +0530
+Mysql2::Error::ConnectionError (Access denied for user 'root'@'localhost' (using password: NO)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-12-10 16:48:27 +0530
+  
+Mysql2::Error::ConnectionError (Access denied for user 'root'@'localhost' (using password: NO)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-12-10 16:48:29 +0530
+  
+Mysql2::Error::ConnectionError (Access denied for user 'root'@'localhost' (using password: NO)):
+  
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `connect'
+mysql2 (0.5.3) lib/mysql2/client.rb:90:in `initialize'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `mysql2_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-12-10 16:53:10 +0530
+  
+ActiveRecord::NoDatabaseError (Unknown database 'eten_development'):
+  
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:28:in `rescue in mysql2_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:14:in `mysql2_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.1) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (9.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `eten_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `eten_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (603.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (307.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('2009858255556866610', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (14.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-12-10 11:24:01.824536', '2019-12-10 11:24:01.824536')[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('2009858255556866610')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-12-10 16:54:11 +0530
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
 Processing by Rails::WelcomeController#index as HTML
-  Rendered /usr/lib/ruby/vendor_ruby/rails/templates/rails/welcome/index.html.erb (0.5ms)
-Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  Rendering /home/ajit/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ajit/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.0ms | Allocations: 309)
+Completed 200 OK in 26ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 1750)
 
 
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:44:24 +0530
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2009858255556866610', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTenders (20191210113051)
+  [1m[35m (346.4ms)[0m  [1m[35mCREATE TABLE `tenders` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191210113051')[0m
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2009858255556866610')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 17:03:16 +0530
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.7ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1446)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ajit/projects/test/eten/public/packs
+[Webpacker] Hash: 53154d7baad00c6a1252
+Version: webpack 4.41.2
+Time: 2178ms
+Built at: 12/10/2019 5:03:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0b67a3cc2fcde6055024.js    124 KiB  application  [emitted] [immutable]  application
+js/application-0b67a3cc2fcde6055024.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
 
-ActionController::RoutingError (uninitialized constant PostsController):
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `const_get'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:261:in `block in constantize'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `each'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `inject'
-  /usr/lib/ruby/vendor_ruby/active_support/inflector/methods.rb:259:in `constantize'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:70:in `controller_reference'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:60:in `controller'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:39:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:43:in `block in serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `each'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/journey/router.rb:30:in `serve'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/routing/route_set.rb:817:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/etag.rb:24:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/conditionalget.rb:25:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/head.rb:13:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/params_parser.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/flash.rb:260:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:225:in `context'
-  /usr/lib/ruby/vendor_ruby/rack/session/abstract/id.rb:220:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/cookies.rb:560:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/query_cache.rb:36:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
-  /usr/lib/ruby/vendor_ruby/active_record/migration.rb:377:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
-  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
-  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
-  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
-  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
-  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
-  /usr/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
-  /usr/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Completed 200 OK in 4316ms (Views: 4312.1ms | ActiveRecord: 1.8ms | Allocations: 23743)
 
 
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (30.4ms)
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 17:03:23 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.3ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 686)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 4147)
 
 
-Started GET "/posts" for 127.0.0.1 at 2019-12-05 13:45:35 +0530
-
-ActionController::RoutingError (No route matches [GET] "/posts"):
-  
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (5.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (24.9ms)
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-10 17:03:25 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 266.2ms | Allocations: 5305)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 267.2ms | Allocations: 5665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 280ms (Views: 274.5ms | ActiveRecord: 0.6ms | Allocations: 12257)
 
 
-Started GET "/start" for 127.0.0.1 at 2019-12-05 13:45:46 +0530
-Processing by StartController#index as HTML
-  Rendered start/index.html.erb within layouts/application (0.3ms)
-Completed 200 OK in 2941ms (Views: 2940.3ms | ActiveRecord: 0.0ms)
+Started POST "/tenders" for 127.0.0.1 at 2019-12-10 17:03:36 +0530
+Processing by TendersController#create as HTML
+  Parameters: {"authenticity_token"=>"0AZZLJpm7zHec5KYvy2cSDs1PlRzl1gIfXaCr+aUUigIg2ppGYFt/1KGxZOdjiiyPiJPUtcDDHNCkaz7vgH/4A==", "tender"=>{"title"=>"tender 1", "body"=>""}, "commit"=>"Create Tender"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tenders_controller.rb:30:in `block in create'
+  [1m[36mTender Create (0.3ms)[0m  [1m[32mINSERT INTO `tenders` (`title`, `body`, `created_at`, `updated_at`) VALUES ('tender 1', '', '2019-12-10 11:33:36.392421', '2019-12-10 11:33:36.392421')[0m
+  ↳ app/controllers/tenders_controller.rb:30:in `block in create'
+  [1m[35m (93.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tenders_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/tenders/1
+Completed 302 Found in 109ms (ActiveRecord: 95.1ms | Allocations: 2935)
 
 
-Started GET "/assets/start.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
+Started GET "/tenders/1" for 127.0.0.1 at 2019-12-10 17:03:36 +0530
+Processing by TendersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTender Load (0.5ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tenders_controller.rb:67:in `set_tender'
+  Rendering tenders/show.html.erb within layouts/application
+  Rendered tenders/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 0.5ms | Allocations: 4881)
 
 
-Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 17:03:40 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.7ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.7ms | Allocations: 4260)
 
 
-Started GET "/assets/start.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
+Started DELETE "/tenders/1" for 127.0.0.1 at 2019-12-10 17:03:52 +0530
+Processing by TendersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hFCAK2suHPD1nG4U23TcPqrtMBpEl3us1ZscolYO9eKWVaahXKP7swficMCXNrMMbbH/pKr6HHWL6B2LNaXNGA==", "id"=>"1"}
+  [1m[36mTender Load (0.7ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tenders_controller.rb:67:in `set_tender'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tenders_controller.rb:57:in `destroy'
+  [1m[36mTender Destroy (49.6ms)[0m  [1m[31mDELETE FROM `tenders` WHERE `tenders`.`id` = 1[0m
+  ↳ app/controllers/tenders_controller.rb:57:in `destroy'
+  [1m[35m (75.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tenders_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/tenders
+Completed 302 Found in 139ms (ActiveRecord: 126.3ms | Allocations: 2820)
 
 
-Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 17:03:52 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.5ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 4138)
 
 
-Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
+Started GET "/tenders" for 127.0.0.1 at 2019-12-10 17:09:15 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (0.3ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:15
+  Rendered tenders/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 10305)
 
 
-Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
-
-
-Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-12-05 13:45:49 +0530
-
-
-Started GET "/start" for 127.0.0.1 at 2019-12-05 13:46:34 +0530
-
-ActionController::RoutingError (No route matches [GET] "/start"):
-  
-
-
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (23.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2019-12-05 13:46:38 +0530
-Processing by StartController#index as HTML
-  Rendered start/index.html.erb within layouts/application (0.0ms)
-Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
