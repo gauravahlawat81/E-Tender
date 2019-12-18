@@ -2602,3 +2602,637 @@ Processing by PagesController#landingpage as HTML
 Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3949)
 
 
+Started GET "/" for 127.0.0.1 at 2019-12-16 03:15:12 +0530
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 5.0ms | Allocations: 584)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 47.0ms | ActiveRecord: 0.0ms | Allocations: 10115)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-16 03:15:29 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 1.3ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 3933)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-16 03:16:25 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.7ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 3840)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 03:16:28 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 614)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5307)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 16.5ms | ActiveRecord: 1.3ms | Allocations: 18597)
+
+
+Started GET "/password/new" for 127.0.0.1 at 2019-12-16 03:16:36 +0530
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 177)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1369)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 6016)
+
+
+Started POST "/password" for 127.0.0.1 at 2019-12-16 03:16:53 +0530
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"8AzKCu0cyHUVwU2FE0H8RCYQ0lAaehOn8R5OfqHDje5MSR3bfmMUWMge4LpVrm7ZDa2AnCOJYS1fXzafz3i9ww==", "user"=>{"email"=>"ajitmujumdar25999@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajitmujumdar25999@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 223)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 0.6ms | Allocations: 9264)
+
+
+Started POST "/password" for 127.0.0.1 at 2019-12-16 03:17:06 +0530
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"DgQrCK1rST7CrK+7qV0/yi4xUNIlRzXkC4vwx6E2/IHi+Ajt+agVMJtmS2th837ysewn8yb4xGIAr5SDoU2Bhw==", "user"=>{"email"=>"ajit@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`reset_password_token` = '9033662f141caa83365848022d33d314ebaa777fdb7c8a9a64b51ed110540757' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`reset_password_token` = '9033662f141caa83365848022d33d314ebaa777fdb7c8a9a64b51ed110540757', `users`.`reset_password_sent_at` = '2019-12-15 21:47:06', `users`.`updated_at` = '2019-12-15 21:47:06.783725' WHERE `users`.`id` = 1[0m
+  [1m[35m (46.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 0.7ms | Allocations: 250)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 4.5ms
+Delivered mail 5df6a9daeb759_46212b06c157d0bc29577@ajit-HP-Notebook.mail (15.2ms)
+Date: Mon, 16 Dec 2019 03:17:06 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ajit@gmail.com
+Message-ID: <5df6a9daeb759_46212b06c157d0bc29577@ajit-HP-Notebook.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello ajit@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/password/edit?reset_password_token=ophcqY47ynxHLP4ujGoP">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/login
+Completed 302 Found in 344ms (ActiveRecord: 47.9ms | Allocations: 36400)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 03:17:06 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1084)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 5131)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-16 19:30:16 +0530
+  [1m[35m (32.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 21.6ms | Allocations: 584)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 328ms (Views: 312.2ms | ActiveRecord: 0.0ms | Allocations: 9345)
+
+
+Started GET "/register" for 127.0.0.1 at 2019-12-16 19:30:23 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 9.1ms | Allocations: 207)
+  Rendered devise/shared/_links.html.erb (Duration: 10.3ms | Allocations: 531)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 189.2ms | Allocations: 5977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 336ms (Views: 199.4ms | ActiveRecord: 69.7ms | Allocations: 19205)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 19:30:32 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 214)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.4ms | Allocations: 1736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 6507)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-16 19:30:36 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wx77M0FNVD0IjXNt1ivWkrbQydBJbIog7nmGoltHfgGkl3vkzA/gapbXkV4VkGEhI/Hfodus4JC0CnYYzFueMQ==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 315ms (ActiveRecord: 0.4ms | Allocations: 5355)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-16 19:30:37 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.html.erb:26
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.7ms | Allocations: 5289)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-16 19:30:39 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  [1m[36mTender Load (20.1ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:17
+  Rendered tenders/index.html.erb within layouts/application (Duration: 52.3ms | Allocations: 5246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 36.9ms | ActiveRecord: 21.5ms | Allocations: 9770)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-16 19:30:51 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H1A8QeqRYEIlS4ndJzinfpaGFxWrTR49W0HCPpMOZ5K5NIaWuSVT2QFw9+ZC8XVpN9eIFBeLYk8lW4GL3loCIw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 67ms (ActiveRecord: 0.4ms | Allocations: 2733)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-16 19:30:52 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.4ms | Allocations: 180)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3950)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 19:31:39 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1084)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5110)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 19:31:45 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 5087)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-16 19:31:48 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"6pH2iDW2o1zHm+UMSoAv1slfV8H2VMOk6moLSIzdkZvimADoQV7EG8bWjRER4qwRNcJAmsscOjaRunHz3UZ3Kw==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 169ms (ActiveRecord: 0.6ms | Allocations: 2756)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-16 19:31:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.html.erb:26
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 4774)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-16 19:31:55 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/LuGtxtxiQ7UYa9PrSV+eK9p7NXom+HbdBGYk4l2VWmjTRTNidjLP8ueOsNUO2Oc2fPAkotj1kkQivE4sHPwgQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 2194)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-16 19:31:55 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3942)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 19:33:45 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 5099)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-16 19:33:48 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"sLqc3w8+MQfL0QGdIazC8y+9+NAKFCYXX5wE+47ccLUomlKdzXyq/ms9MSgG5x1WyoZ6X+Pb5v7ib2/WrgzGFg==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 160ms (ActiveRecord: 0.3ms | Allocations: 2753)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-16 19:33:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.html.erb:26
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 975)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 4768)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-16 19:33:50 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  [1m[36mTender Load (0.3ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:17
+  Rendered tenders/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.9ms | Allocations: 5535)
+
+
+Started GET "/tenders/2" for 127.0.0.1 at 2019-12-16 19:40:38 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TendersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTender Load (0.4ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/tenders_controller.rb:67:in `set_tender'
+  Rendering tenders/show.html.erb within layouts/application
+  Rendered tenders/show.html.erb within layouts/application (Duration: 55.8ms | Allocations: 270)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.4ms | Allocations: 4898)
+
+
+Started GET "/tenders/2" for 127.0.0.1 at 2019-12-16 19:41:14 +0530
+Processing by TendersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTender Load (0.5ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/tenders_controller.rb:67:in `set_tender'
+  Rendering tenders/show.html.erb within layouts/application
+  Rendered tenders/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 4453)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-16 19:42:31 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wNI/v/jobz9ni+9yRvhQIrkcqVDl491TFD2fGh7OizpEtxl7TNVj9RaIoMl3XKpZEVVxEMUvdgrtwQCNAGTQ+Q=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.7ms | Allocations: 2182)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-16 19:42:31 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 2.0ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 3953)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-16 19:42:33 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1084)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5114)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-16 19:42:36 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"IJwIci5C0pvoYdjOjbjEN+MHI+j250x7tu+8LJ8ujJ8s16JRp7ASmi6tvUrEX7yWrlHDKsFLTqkOUHTAVktP1Q==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 168ms (ActiveRecord: 1.1ms | Allocations: 2754)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-16 19:42:36 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.html.erb:26
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.6ms | Allocations: 4784)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-18 19:56:09 +0530
+  [1m[35m (32.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 26.4ms | Allocations: 584)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 193ms (Views: 165.6ms | ActiveRecord: 0.0ms | Allocations: 9345)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-18 19:56:16 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 10.7ms | Allocations: 623)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 175.0ms | Allocations: 4757)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 312ms (Views: 183.0ms | ActiveRecord: 79.8ms | Allocations: 18063)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-18 19:56:20 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"PEflX4nxXEfdYaZ6zfqAVHw4nIjrEjVVlPSXqY1jZ2qj7K9UH1ZoKc+d1mzt9MpyVHPuMdqZh2sv/pEoqrKqGg==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 317ms (ActiveRecord: 0.8ms | Allocations: 5354)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 19:56:20 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.html.erb:26
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 5293)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-18 19:56:26 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zo6lKYdbMthpBc3SHdu8uO0+CE4AR4gvT8Rq2oAu0/Z3lEh2q4aklghrAelufWIhJ6tqDsdSAlCe4WN9nc/FZA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 75ms (ActiveRecord: 0.3ms | Allocations: 2750)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-18 19:56:26 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 3950)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 19:56:32 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 3917)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-18 19:56:36 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mTender Load (49.0ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders`[0m
+  ↳ app/views/tenders/index.html.erb:17
+  Rendered tenders/index.html.erb within layouts/application (Duration: 74.1ms | Allocations: 4424)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 30.0ms | ActiveRecord: 51.1ms | Allocations: 8961)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 19:59:33 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1174)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2499)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+		.main{
+		display: inline-block;
+	    background-color:white;
+	    text-align: center;
+	    width: 100px;
+	    height: 100px;
+	    line-height: 2.4em;
+	    margin-top:200px;
+	    margin-left: 500px;
+	    border-radius: 50px;
+		}
+	</style>
+  <title>E-Tender NITK</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+	<body>
+		<div class="main">
+			<% if current_user %>
+    		  <%= link_to "Logout",destroy_user_session_path,method: :delete %>
+    		  <% end %>
+			<p>Hello ji</p>
+			<% if current_user%>
+			<%= link_to "Create and view tenders",tenders_path %>
+			<% else %>
+			<%= link_to "Please sign in to page"new_user_session_path %>
+			<% end%>
+		</div>
+	</body>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="en">
+3:    <head>
+4:    	<style type="text/css">
+5:    		.main{
+6:    		display: inline-block;
+7:    	    background-color:white;
+8:    	    text-align: center;
+9:    	    width: 100px;
+10:    	    height: 100px;
+11:    	    line-height: 2.4em;
+12:    	    margin-top:200px;
+13:    	    margin-left: 500px;
+14:    	    border-radius: 50px;
+15:    		}
+16:    	</style>
+17:      <title>E-Tender NITK</title>
+18:      <meta charset="utf-8">
+19:      <meta name="viewport" content="width=device-width, initial-scale=1">
+20:      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+21:      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+22:      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+23:    </head>
+24:    	<body>
+25:    		<div class="main">
+26:    			<% if current_user %>
+27:        		  <%= link_to "Logout",destroy_user_session_path,method: :delete %>
+28:        		  <% end %>
+29:    			<p>Hello ji</p>
+30:    			<% if current_user%>
+31:    			<%= link_to "Create and view tenders",tenders_path %>
+32:    			<% else %>
+33:    			<%= link_to "Please sign in to page"new_user_session_path %>
+34:    			<% end%>
+35:    		</div>
+36:    	</body>
+37:    </html>
+  
+app/views/pages/home.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 19:59:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 424)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 5282)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-18 19:59:53 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1926)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 7017)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 20:04:39 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6070)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-18 20:04:43 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 535)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1969)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 10.5ms | ActiveRecord: 1.5ms | Allocations: 14475)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-18 20:04:46 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"/pgp4tYHMMGkHJwV6goEyuO+G8Sh0OlUh16ilfQjYT5LfMEzXOhonMBX/7oKYnIqoEQ6yC73qDKVaFJk8RjAMA==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 155ms (ActiveRecord: 0.4ms | Allocations: 3969)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 20:04:46 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 4807)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 20:04:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 981)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 4788)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 20:04:56 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 6021)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-18 20:04:58 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BpcB50fWjQ1LtaQqwt5jQJ30t961LPOvp8OpEw208ScfUfGYkODXbR3lBuMLQLwRH4cQsbIjvRXcQjRqpBUn/Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 2346)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-18 20:04:58 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.9ms | Allocations: 413)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4292)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-18 20:05:01 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1909)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 6983)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-18 20:05:03 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ua8y1KtqGVE9+jfkIVWV6b2Zw6lsEm9ZlJKhUsuDJJQylw5+NwwVAjWfGml3ephB2pIcsyTcyln4NtERON70Pw==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 152ms (ActiveRecord: 0.3ms | Allocations: 3858)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 20:05:03 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 985)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 4780)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-18 20:05:07 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GgyLVPm6b0fN3zVtbOnTMtV420646oG1UUTdPqLCtuaUQTvQgK1QOwki4dXoxs6ma5x4xYV06X5DlacnZ673dw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 2208)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-18 20:05:07 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.4ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3948)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-18 20:05:12 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 165)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3941)
+
+
