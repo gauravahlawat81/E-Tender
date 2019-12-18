@@ -1,6 +1,7 @@
 class TendersController < ApplicationController
   before_action :set_tender, only: [:show, :edit, :update, :destroy]
-
+  access user: {except: [:destroy,:update,:new,:edit,:create]}, admin: :all,message: "One shall not pass"
+  #belongs_to :user
   # GET /tenders
   # GET /tenders.json
   def index

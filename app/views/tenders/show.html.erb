@@ -10,5 +10,5 @@
   <%= @tender.body %>
 </p>
 
-<%= link_to 'Edit', edit_tender_path(@tender) %> |
+<%= link_to 'Edit', edit_tender_path(@tender) if logged_in?(:admin, :customer, :etc) %> |
 <%= link_to 'Back', tenders_path %>

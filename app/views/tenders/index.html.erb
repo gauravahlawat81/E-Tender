@@ -19,8 +19,8 @@
         <td><%= tender.title %></td>
         <td><%= tender.body %></td>
         <td><%= link_to 'Show', tender %></td>
-        <td><%= link_to 'Edit', edit_tender_path(tender) %></td>
-        <td><%= link_to 'Destroy', tender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_tender_path(tender) if logged_in?(:admin) %></td>
+        <td><%= link_to 'Destroy', tender, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Tender', new_tender_path %>
+<%= link_to 'New Tender', new_tender_path if logged_in?(:admin)%>
