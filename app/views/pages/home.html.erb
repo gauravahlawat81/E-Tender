@@ -23,11 +23,13 @@
 </head>
 	<body>
 		<div class="main">
-			<% if current_user %>
-    		  <%= link_to "Logout",destroy_user_session_path,method: :delete %>
-    		  <% end %>
+			<%= logout_helper %>
 			<p>Hello ji</p>
+			<% if current_user%>
 			<%= link_to "Create and view tenders",tenders_path %>
+			<% else %>
+			<%= link_to "Please sign in to Portal",new_user_session_path %>
+			<% end%>
 		</div>
 	</body>
 </html>
