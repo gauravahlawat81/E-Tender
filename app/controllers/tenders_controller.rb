@@ -1,5 +1,7 @@
 class TendersController < ApplicationController
-  before_action :set_tender, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource param_method: :my_sanitizer
+  authorize_resource :class => false
+  before_action :set_tender, only: [:show, :edit, :update, :destroy,:toggle_status]
 
   # GET /tenders
   # GET /tenders.json
@@ -10,6 +12,7 @@ class TendersController < ApplicationController
   # GET /tenders/1
   # GET /tenders/1.json
   def show
+    authorize! :read , @tenders
   end
 
   # GET /tenders/new
@@ -25,7 +28,7 @@ class TendersController < ApplicationController
   # POST /tenders.json
   def create
     @tender = Tender.new(tender_params)
-
+    @tender.user_id = current_user.id    
     respond_to do |format|
       if @tender.save
         format.html { redirect_to @tender, notice: 'Tender was successfully created.' }
@@ -35,6 +38,15 @@ class TendersController < ApplicationController
         format.json { render json: @tender.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def toggle_status
+    if @tender.published?
+      @tender.draft! 
+    else
+      @tender.published!
+    end
+    redirect_to tenders_url
   end
 
   # PATCH/PUT /tenders/1
@@ -65,6 +77,11 @@ class TendersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_tender
       @tender = Tender.find(params[:id])
+    end
+
+
+    def my_sanitizer
+      params.require(:tender).permit(:user_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
