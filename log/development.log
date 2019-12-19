@@ -5613,3 +5613,1250 @@ Processing by PagesController#landingpage as HTML
 Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 7469)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2009858255556866610', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserToTenders (20191218215143)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE `tenders` ADD `user_id` bigint[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2009858255556866610')[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2009858255556866610', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserToTenders (20191218215143)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE `tenders` ADD `user_id` bigint[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2009858255556866610')[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+  [1m[35m (9.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2009858255556866610', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddForeignKeyToTender (20191218215500)
+  [1m[35m (971.6ms)[0m  [1m[35mALTER TABLE `tenders` ADD CONSTRAINT `fk_rails_23087695b1`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191218215500')[0m
+  [1m[35m (38.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2009858255556866610')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mTender Load (0.5ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` LIMIT 11[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTender Create (0.3ms)[0m  [1m[32mINSERT INTO `tenders` (`title`, `created_at`, `updated_at`, `user_id`) VALUES ('First post', '2019-12-18 21:59:37.559100', '2019-12-18 21:59:37.559100', 6)[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTender Load (0.5ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`user_id` = 6 LIMIT 11[0m
+Started GET "/login" for 127.0.0.1 at 2019-12-19 03:35:47 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 146)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1149)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 16651)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-19 03:36:07 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"O1eScjWJrvKPGjgHiPKZrAYZ59t/eVPXMb6qrHr67v2F1Q7QnMfNuNh/9sshAsQiG+iFbMRJX+K8htPIn3uJHg==", "user"=>{"email"=>"ajit123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit123@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 157ms (ActiveRecord: 0.5ms | Allocations: 2891)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-19 03:36:07 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1032)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 8757)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 03:36:13 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2217)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 2876)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:   </thead>
+    15: 
+    16:   <tbody>
+    17:     <% @tenders.each do |tender| %>
+    18:       <tr>
+    19:         <td><%= tender.title %></td>
+    20:         <td><%= tender.body %></td>
+  
+app/views/tenders/index.html.erb:17
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mTender Load (0.4ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`user_id` = 7 LIMIT 11[0m
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 03:38:59 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2639)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 3972)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15: 
+    16:   <tbody>
+    17:     <% if @tenders.nil? %> 
+    18:     <% @tenders.each do |tender| %>
+    19:       <tr>
+    20:         <td><%= tender.title %></td>
+    21:         <td><%= tender.body %></td>
+  
+app/views/tenders/index.html.erb:18
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 03:40:51 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2590)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 3908)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15: 
+    16:   <tbody>
+    17:     <% if @tenders.blank? %> 
+    18:     <% @tenders.each do |tender| %>
+    19:       <tr>
+    20:         <td><%= tender.title %></td>
+    21:         <td><%= tender.body %></td>
+  
+app/views/tenders/index.html.erb:18
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 03:41:00 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 9681)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 03:41:16 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1370)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 9669)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTender Load (0.6ms)[0m  [1m[34mSELECT `tenders`.* FROM `tenders` WHERE `tenders`.`user_id` = 6 LIMIT 11[0m
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 03:50:46 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 9356)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.6ms | Allocations: 18332)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 03:50:48 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 1.8ms | Allocations: 1373)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1698)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2289)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: tender, local: true) do |form| %>
+  <% if tender.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tender.errors.count, "error") %> prohibited this tender from being saved:</h2>
+
+      <ul>
+        <% tender.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <% :user_id current_user_id%>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: tender, local: true) do |form| %>
+2:      <% if tender.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(tender.errors.count, "error") %> prohibited this tender from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% tender.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :title %>
+16:        <%= form.text_field :title %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :body %>
+21:        <%= form.text_area :body %>
+22:      </div>
+23:      <% :user_id current_user_id%>
+24:      <div class="actions">
+25:        <%= form.submit %>
+26:      </div>
+27:    <% end %>
+  
+app/views/tenders/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/tenders/_form.html.erb:29: syntax error, unexpected end, expecting end-of-input
+app/views/tenders/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/tenders/_form.html.erb:29: syntax error, unexpected end, expecting end-of-input
+app/views/tenders/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/tenders/_form.html.erb:29: syntax error, unexpected end, expecting end-of-input
+app/views/tenders/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/tenders/_form.html.erb:29: syntax error, unexpected end, expecting end-of-input
+app/views/tenders/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/tenders/_form.html.erb:29: syntax error, unexpected end, expecting end-of-input
+app/views/tenders/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/tenders/_form.html.erb:29: syntax error, unexpected end, expecting end-of-input
+app/views/tenders/new.html.erb:3
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 03:56:34 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 1.6ms | Allocations: 1725)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2055)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 4079)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: tender, local: true) do |form| %>
+    2:   <% if tender.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(tender.errors.count, "error") %> prohibited this tender from being saved:</h2>
+    5: 
+  
+app/views/tenders/_form.html.erb:2
+app/views/tenders/_form.html.erb:1
+app/views/tenders/new.html.erb:3
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 03:57:56 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 394.1ms | Allocations: 202133)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 394.9ms | Allocations: 202458)
+Completed 500 Internal Server Error in 397ms (ActiveRecord: 0.0ms | Allocations: 203759)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fc51c0c65c8>:0x00007fc51c0c4728>):
+    22:     <%= form.label :body %>
+    23:     <%= form.text_area :body %>
+    24:   </div>
+    25:   <%= f.hidden_field :user_id %> 
+    26:   <div class="actions">
+    27:     <%= form.submit %>
+    28:   </div>
+  
+app/views/tenders/_form.html.erb:25
+app/views/tenders/_form.html.erb:1
+app/views/tenders/new.html.erb:3
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 03:58:39 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 66.4ms | Allocations: 5678)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 67.6ms | Allocations: 6029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms | Allocations: 14228)
+
+
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 03:59:03 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 03:59:55 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:00:01 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/ajit/.rbenv/versions/2.6.5/bin/rake:23)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/ajit/.rbenv/versions/2.6.5/bin/rake:23)
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:01:34 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:01:38 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 9430)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 25.9ms | ActiveRecord: 3.9ms | Allocations: 17675)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:01:40 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 2.8ms | Allocations: 3269)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 10564)
+
+
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:01:46 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:02:05 +0530
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 4.7ms | Allocations: 5766)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 6245)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 86.3ms | ActiveRecord: 0.0ms | Allocations: 26459)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:02:08 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 35.8ms | Allocations: 10477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 1.8ms | Allocations: 17897)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-19 04:02:09 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VjWk82qN6rbkYPR9DYrBNLcg3o6HiOhPzCeUGr2QzGDbyeXKGNlIAlfp9SaavwDiFjCQvihWUlbOrLnyo/gXYw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms | Allocations: 3303)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-19 04:02:09 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 4.6ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 8393)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-19 04:02:11 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 618)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2729)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 11370)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-19 04:02:15 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"tpEz8jtS39Xa40M8p8SGwlSz+87F1nQQHSSU72MoK2OArkF6KzQXyOCtVmdtlGUbrUW4JCLqmbSsEp1momOjQg==", "user"=>{"email"=>"ajit123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit123@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 154ms (ActiveRecord: 0.4ms | Allocations: 4909)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-19 04:02:15 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1242)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 8885)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:02:17 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1063)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms | Allocations: 8372)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:02:19 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 1.4ms | Allocations: 2778)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2871)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 10056)
+
+
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:02:56 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:03:50 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2019-12-19 04:04:07 +0530
+  [1m[35m (3.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/landingpage.html.erb:28
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 19.0ms | Allocations: 10486)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 112ms (Views: 103.3ms | ActiveRecord: 2.6ms | Allocations: 30783)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-19 04:04:09 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HtRhdgQ8B0GDg2Evk2s/kU3PZnkPU5bHnIj/M3qH+mNE/oaSazyfolkxkL2DGDhizYojPndCUVPxCuaf0zQMYA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 4883)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-19 04:04:09 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 2.5ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 7483)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-19 04:04:11 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 618)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 11783)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-19 04:04:17 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HIgdPuZNALHU5RZzlH+a3/G0hARnXLI873P4mQg0FaRK/DHvVrMn0Ezzq+Jf+2/oCNSO70d0d8AD8k+ABMF/BA==", "user"=>{"email"=>"ajit123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit123@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 165ms (ActiveRecord: 1.0ms | Allocations: 4926)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-19 04:04:17 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.4ms | Allocations: 8895)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:04:21 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1388)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.4ms | Allocations: 9309)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:04:25 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 2.5ms | Allocations: 3815)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 4166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 11471)
+
+
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:04:30 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:06:07 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:06:12 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 9512)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 2.5ms | Allocations: 18521)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:06:14 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 2.9ms | Allocations: 3161)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 10811)
+
+
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:06:19 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/logout" for 127.0.0.1 at 2019-12-19 04:06:26 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CkcK76c/d7w0mc3KN1whUI/DBBQ0XlAL6d+loSWtCM4Hmr/ctUS5q25NJwXD49agNBnlfcIfm69IrCOoDmGktw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 2694)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-19 04:06:26 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.8ms | Allocations: 419)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 8360)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-19 04:06:27 +0530
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 0.6ms | Allocations: 168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 7343)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-19 04:06:28 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 535)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1975)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 10588)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-19 04:06:32 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"25z2rMbYJMhspgzpz9iwFoGtsbjp7CtlnlL7nyzvxMoRhwOsyneVjrl99VKV3svbpfp3a0ri1Aby5qCaqHx/QQ==", "user"=>{"email"=>"ajit@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 150ms (ActiveRecord: 0.3ms | Allocations: 3942)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-19 04:06:32 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.4ms | Allocations: 8880)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:06:34 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 8375)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:06:36 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 8357)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:06:39 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 1.1ms | Allocations: 2325)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2418)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 9624)
+
+
+Started POST "/tenders/new" for 127.0.0.1 at 2019-12-19 04:06:48 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/tenders/new"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 04:08:52 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1048)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.4ms | Allocations: 8349)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:08:54 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 1.6ms | Allocations: 2321)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2413)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 9600)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:09:23 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 3.2ms | Allocations: 1760)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2085)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3380)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: tender, local: true) do |form| %>
+    2:   <% if tender.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(tender.errors.count, "error") %> prohibited this tender from being saved:</h2>
+    5: 
+  
+app/views/tenders/_form.html.erb:2
+app/views/tenders/_form.html.erb:1
+app/views/tenders/new.html.erb:3
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 04:10:30 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 1.7ms | Allocations: 1754)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2084)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3377)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: tender, local: true) do |form| %>
+    2:   <% if @tender.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(tender.errors.count, "error") %> prohibited this tender from being saved:</h2>
+    5: 
+  
+app/views/tenders/_form.html.erb:2
+app/views/tenders/_form.html.erb:1
+app/views/tenders/new.html.erb:3
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+  [1m[35m (37.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (82.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 11[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/ajit/projects/E-Tender/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2019-12-19 16:37:21 +0530
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PagesController#landingpage as HTML
+  Rendering pages/landingpage.html.erb within layouts/application
+  Rendered pages/landingpage.html.erb within layouts/application (Duration: 9.8ms | Allocations: 583)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 165ms (Views: 152.4ms | ActiveRecord: 0.0ms | Allocations: 20784)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-12-19 16:37:23 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 11.9ms | Allocations: 623)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 122.5ms | Allocations: 4735)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 133.5ms | ActiveRecord: 1.5ms | Allocations: 22243)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-12-19 16:37:28 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Mb7ZJvDUrYKK3yDv8yWvpz64+rT3OJ9maZkRNZH4dX76vljHxb8579pWlwMrC5brle3B3gl66x/vdGCJLSmVzw==", "user"=>{"email"=>"ajit123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ajit123@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/pages/home
+Completed 302 Found in 473ms (ActiveRecord: 0.6ms | Allocations: 5402)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-12-19 16:37:28 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/helpers/application_helper.rb:3:in `logout_helper'
+  Rendered pages/home.html.erb within layouts/application (Duration: 25.5ms | Allocations: 1250)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 47.0ms | ActiveRecord: 0.8ms | Allocations: 8902)
+
+
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 16:37:30 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1397)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.4ms | Allocations: 9325)
+
+
+Started GET "/tenders/new" for 127.0.0.1 at 2019-12-19 16:37:32 +0530
+Processing by TendersController#new as HTML
+  Rendering tenders/new.html.erb within layouts/application
+  Rendered tenders/_form.html.erb (Duration: 2.7ms | Allocations: 1755)
+  Rendered tenders/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2085)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2675)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: tender, local: true) do |form| %>
+    2:   <% if tender.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(tender.errors.count, "error") %> prohibited this tender from being saved:</h2>
+    5: 
+  
+app/views/tenders/_form.html.erb:2
+app/views/tenders/_form.html.erb:1
+app/views/tenders/new.html.erb:3
+Started GET "/tenders" for 127.0.0.1 at 2019-12-19 16:37:41 +0530
+Processing by TendersController#index as HTML
+  Rendering tenders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 7 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/tenders/index.html.erb:2
+  Rendered tenders/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 8423)
+
+

@@ -1,7 +1,8 @@
 class TendersController < ApplicationController
+  belongs_to :user
   before_action :set_tender, only: [:show, :edit, :update, :destroy]
-  access user: {except: [:destroy,:update,:new,:edit,:create]}, admin: :all,message: "One shall not pass"
-  #belongs_to :user
+  access user: :all, admin: :all,message: "One shall not pass"
+
   # GET /tenders
   # GET /tenders.json
   def index
@@ -26,7 +27,7 @@ class TendersController < ApplicationController
   # POST /tenders.json
   def create
     @tender = Tender.new(tender_params)
-
+    @tender.user_id = current_user.id 
     respond_to do |format|
       if @tender.save
         format.html { redirect_to @tender, notice: 'Tender was successfully created.' }
@@ -70,6 +71,6 @@ class TendersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tender_params
-      params.require(:tender).permit(:title, :body)
+      params.require(:tender).permit(:title, :body,:user_id)
     end
 end

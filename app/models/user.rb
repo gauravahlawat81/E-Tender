@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :tender
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##
