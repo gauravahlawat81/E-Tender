@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
       <% if current_user %>
+        <%= current_user.id%>
           <%= link_to "Logout",destroy_user_session_path,method: :delete %>
           <% end %>
 <h1>Tenders</h1>
@@ -9,19 +10,27 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% unless @tenders.blank? %> 
     <% @tenders.each do |tender| %>
+    <% if tender.published? || tender.user_id == current_user.id %>
       <tr>
         <td><%= tender.title %></td>
         <td><%= tender.body %></td>
+        <td><%= tender.user_id%></td>
+        <td><%= link_to tender.status,toggle_status_tender_path(tender),data: { confirm: 'Are you sure?' } %>
         <td><%= link_to 'Show', tender %></td>
-        <td><%= link_to 'Edit', edit_tender_path(tender) if logged_in?(:admin) %></td>
-        <td><%= link_to 'Destroy', tender, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %></td>
+        <% if can? :update , tender %> 
+        <td><%= link_to '| Edit', edit_tender_path(tender) %></td>
+        <% end %>
+        <% if can? :destroy , tender %> 
+        <td><%= link_to '| Destroy', tender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      <% end %>
       </tr>
     <% end %>
     <% end %>
