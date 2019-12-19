@@ -12,7 +12,7 @@ class TendersController < ApplicationController
   # GET /tenders/1
   # GET /tenders/1.json
   def show
-    authorize! :read , @tenders
+
   end
 
   # GET /tenders/new
