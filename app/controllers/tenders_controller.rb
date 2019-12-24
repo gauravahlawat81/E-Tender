@@ -1,6 +1,8 @@
 class TendersController < ApplicationController
-  before_action :set_tender, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource param_method: :my_sanitizer
+  authorize_resource :class => false
+  before_action :set_tender, only: [:show, :edit, :update, :destroy,:toggle_status]
+  after_action :generate_ref_id, only: [:create,:update,:destroy]
   # GET /tenders
   # GET /tenders.json
   def index
@@ -10,6 +12,7 @@ class TendersController < ApplicationController
   # GET /tenders/1
   # GET /tenders/1.json
   def show
+
   end
 
   # GET /tenders/new
@@ -25,7 +28,7 @@ class TendersController < ApplicationController
   # POST /tenders.json
   def create
     @tender = Tender.new(tender_params)
-
+    @tender.user_id = current_user.id
     respond_to do |format|
       if @tender.save
         format.html { redirect_to @tender, notice: 'Tender was successfully created.' }
@@ -35,6 +38,15 @@ class TendersController < ApplicationController
         format.json { render json: @tender.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def toggle_status
+    if @tender.published?
+      @tender.draft! 
+    else
+      @tender.published!
+    end
+    redirect_to tenders_url
   end
 
   # PATCH/PUT /tenders/1
@@ -67,8 +79,32 @@ class TendersController < ApplicationController
       @tender = Tender.find(params[:id])
     end
 
+
+    def my_sanitizer
+      params.require(:tender).permit(:user_id)
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def tender_params
       params.require(:tender).permit(:title, :body)
+    end
+
+    def dept
+      User.where(id: @tender.user_id).pluck(:department).join
+    end
+
+    def yeara
+      @tender.created_at.strftime("%Y")
+    end
+
+    def srno
+      first_of_month = Date.current.beginning_of_month
+      last_of_next_month = (Date.current + 1.months).end_of_month
+      Tender.where('created_at BETWEEN ? AND ?', first_of_month, last_of_next_month).published.count
+    end
+
+    def generate_ref_id
+      @tender.ref_id="NITK/#{dept()}/FUND_TYPE/#{yeara()}/#{srno()}/"
+      @tender.save!
     end
 end
