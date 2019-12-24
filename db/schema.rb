@@ -10,13 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_19_190611) do
+ActiveRecord::Schema.define(version: 2019_12_24_095340) do
 
-  create_table "creditails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name"
-    t.string "branch"
+  create_table "doc1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head", default: "", null: false
+    t.string "item_name", default: "", null: false
+    t.integer "quantity", default: 0, null: false
+    t.integer "estimated_cost", default: 0, null: false
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "type_of_tender", default: 0
+    t.index ["tender_id"], name: "index_doc1s_on_tender_id"
+  end
+
+  create_table "docs1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "debit_head", default: "", null: false
+    t.string "item_name", default: "", null: false
+    t.integer "quantity", default: 0
+    t.integer "estimated_cost", default: 0, null: false
+    t.integer "status", default: 0
+    t.index ["tender_id"], name: "index_docs1s_on_tender_id"
   end
 
   create_table "tenders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -26,6 +44,8 @@ ActiveRecord::Schema.define(version: 2019_12_19_190611) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.integer "status", default: 0
+    t.integer "doc1_status", default: 0
+    t.string "ref_id", default: ""
     t.index ["user_id"], name: "index_tenders_on_user_id"
   end
 
@@ -46,5 +66,7 @@ ActiveRecord::Schema.define(version: 2019_12_19_190611) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "doc1s", "tenders"
+  add_foreign_key "docs1s", "tenders"
   add_foreign_key "tenders", "users"
 end

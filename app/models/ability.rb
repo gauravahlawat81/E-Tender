@@ -9,10 +9,13 @@ class Ability
        else
          can :manage, Tender do |tender|
             tender.user_id == user.id
-        end
+          end
         can :read , Tender do |tender|
             tender.user_id == user.id || tender.published? == true
-        end
+          end
+        #can :manage , Doc1 do |doc|
+        #  User.where(id: Tender.where(id: doc.tender_id).select(:user_id)) == user.id
+        #end 
         can :index , :all
         can :create, :all
        end
