@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
-       if user.admin?
+        if user.admin?
          can :manage, :all
        else
          can :manage, Tender do |tender|
@@ -13,9 +13,9 @@ class Ability
         can :read , Tender do |tender|
             tender.user_id == user.id || tender.published? == true
           end
-        #can :manage , Doc1 do |doc|
-        #  User.where(id: Tender.where(id: doc.tender_id).select(:user_id)) == user.id
-        #end 
+        can :manage , Doc1 do |doc|
+            doc.user_id == user.id
+          end 
         can :index , :all
         can :create, :all
        end

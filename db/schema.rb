@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_095340) do
+ActiveRecord::Schema.define(version: 2019_12_24_195554) do
 
   create_table "doc1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tender_id", null: false
@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 2019_12_24_095340) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "type_of_tender", default: 0
+    t.bigint "user_id", null: false
     t.index ["tender_id"], name: "index_doc1s_on_tender_id"
+    t.index ["user_id"], name: "fk_rails_9c427b3d8b"
   end
 
   create_table "docs1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -67,6 +69,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_095340) do
   end
 
   add_foreign_key "doc1s", "tenders"
+  add_foreign_key "doc1s", "users"
   add_foreign_key "docs1s", "tenders"
   add_foreign_key "tenders", "users"
 end

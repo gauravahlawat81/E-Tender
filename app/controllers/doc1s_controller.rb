@@ -1,6 +1,6 @@
 class Doc1sController < ApplicationController
-  #load_and_authorize_resource :tender
-  #load_and_authorize_resource :doc1, through: :tender
+  load_and_authorize_resource :tender
+  load_and_authorize_resource :doc1, through: :tender
 
   before_action :set_tender
   before_action :set_doc1, only: [:show, :edit, :update, :destroy,:download]
@@ -43,7 +43,7 @@ class Doc1sController < ApplicationController
   # POST tenders/1/doc1s
   def create
     @doc1 = @tender.doc1s.build(doc1_params)
-
+    @doc1.user_id = @tender.user_id
     if @doc1.save
       redirect_to([@doc1.tender, @doc1], notice: 'Doc1 was successfully created.')
     else
