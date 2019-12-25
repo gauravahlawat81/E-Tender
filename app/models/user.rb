@@ -6,7 +6,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          validates_presence_of :first_name,:last_name 
-	def first
+	after_create:send_mail
+  def send_mail
+    UserMailer.with(user:self).welcome_email.deliver_now!
+  end
+  def first
 		self.first_name
    end
   def last
