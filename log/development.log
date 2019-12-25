@@ -29637,6 +29637,7 @@ Please, check the "Autoloading and Reloading Constants" guide for solutions.
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2009858255556866610')[0m
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+<<<<<<< HEAD
 DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
 
 Being able to do this is deprecated. Autoloading during initialization is going
@@ -31199,3 +31200,5 @@ Processing by PagesController#landingpage as HTML
 Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 7547)
 
 
+=======
+>>>>>>> 3285895cd7f219e9a5e3928f0faa0e563903520c
