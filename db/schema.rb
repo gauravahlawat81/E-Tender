@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_195554) do
+ActiveRecord::Schema.define(version: 2020_01_01_173147) do
 
   create_table "doc1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tender_id", null: false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_195554) do
     t.integer "status", default: 0
     t.integer "doc1_status", default: 0
     t.string "ref_id", default: ""
+    t.bigint "purchase_commitee"
     t.index ["user_id"], name: "index_tenders_on_user_id"
   end
 
