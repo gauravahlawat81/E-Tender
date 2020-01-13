@@ -17,7 +17,8 @@ class Ability
             doc.user_id == user.id && doc.locked? ==false
           end 
         can :index , :all
-        can :create, Tender  
+        can :create, Tender
+        can :create, Doc1
        end
     #
     # The first argument to `can` is the action you are giving the user
