@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_01_173147) do
+ActiveRecord::Schema.define(version: 2020_01_13_191615) do
+
+  create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
+    t.bigint "tender_id"
+    t.integer "type_of_message", default: 0, null: false
+    t.bigint "nominee"
+    t.string "remark"
+    t.integer "approve", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "doc1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tender_id", null: false
