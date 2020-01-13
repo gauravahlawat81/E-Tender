@@ -62,9 +62,6 @@ class TendersController < ApplicationController
   # DELETE /tenders/1.json
   def destroy
     @tender.locked!
-    respond_to do |format|
-      format.html { redirect_to tenders_url, notice: 'Tender was successfully destroyed.' }
-    end
   end
 
   private
