@@ -15,7 +15,6 @@ class Doc1sController < ApplicationController
   def show
     if @tender.locked? 
       @doc1.locked!
-    else
       redirect_to tenders_path
     end
     end

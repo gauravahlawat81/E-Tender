@@ -8,17 +8,16 @@ class Ability
          can :manage, :all
        else
          can :manage, Tender do |tender|
-            tender.user_id == user.id# && tender.locked? ==false
+            tender.user_id == user.id && tender.locked? ==false
           end
         can :read , Tender do |tender|
             tender.user_id == user.id || tender.published? == true
           end
         can :manage , Doc1 do |doc|
-            doc.user_id == user.id #&& doc.locked? ==false
+            doc.user_id == user.id && doc.locked? ==false
           end 
         can :index , :all
-        can :create, Tender,:all
-        can :new, Tender,:all   
+        can :create, Tender,:all     
        end
     #
     # The first argument to `can` is the action you are giving the user
