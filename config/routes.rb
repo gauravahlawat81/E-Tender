@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :conversations
   resources :tenders do
     resources :doc1s do
         member do

@@ -21,6 +21,42 @@
     <%= form.text_area :body %>
   </div>
 
+
+  <div class="field">
+    <%= form.label :HOD %>
+    <%= form.select(:pcm1 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm1}, {class: "ui dropdown search"} ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Dean(P&D)' %>
+    <%= form.select(:pcm2 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm2}, {class: "ui dropdown search"} ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Registrar %>
+    <%= form.select(:pcm3 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm3}, {class: "ui dropdown search"} ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Nominee 1' %>
+    <%= form.select(:pcm4 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm4}, {class: "ui dropdown search"} ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Nominee 2' %>
+    <%= form.select(:pcm5 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm5}, {class: "ui dropdown search"} ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Asistant Registrar 1' %>
+    <%= form.select(:pcm6 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm6}, {class: "ui dropdown search"} ) %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Asistant Registrar 2' %>
+    <%= form.select(:pcm7 , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: tender.pcm7}, {class: "ui dropdown search"} ) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

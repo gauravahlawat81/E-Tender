@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conversations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<h2>Received </h2>
+  <tbody>
+    <% @conversations.each do |conversation| %>
+      <tr>
+        <% if conversation.receiver_id == current_user.id%>
+        <%= conversation.title%>
+        <%= conversation.sender_id%>
+        
+        <%= conversation.receiver_id %>
+        <td><%= link_to 'Edit', edit_conversation_path(conversation) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+
+ <h2>Sent</h2> 
+  <tbody>
+    <% @conversations.each do |conversation| %>
+      <tr>
+        <% if conversation.sender_id == current_user.id%>
+        <%= conversation.title%>
+        <%= conversation.sender_id%>
+        
+        <%= conversation.receiver_id %>
+        <td><%= link_to 'Edit', edit_conversation_path(conversation) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<br>
+
+<%= link_to 'New Conversation', new_conversation_path %>

@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_095340) do
+ActiveRecord::Schema.define(version: 2020_01_13_191615) do
+
+  create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
+    t.bigint "tender_id"
+    t.integer "type_of_message", default: 0, null: false
+    t.bigint "nominee"
+    t.string "remark"
+    t.integer "approve", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "doc1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tender_id", null: false
@@ -22,7 +36,9 @@ ActiveRecord::Schema.define(version: 2019_12_24_095340) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "type_of_tender", default: 0
+    t.bigint "user_id", null: false
     t.index ["tender_id"], name: "index_doc1s_on_tender_id"
+    t.index ["user_id"], name: "fk_rails_9c427b3d8b"
   end
 
   create_table "docs1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -46,6 +62,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_095340) do
     t.integer "status", default: 0
     t.integer "doc1_status", default: 0
     t.string "ref_id", default: ""
+    t.bigint "purchase_commitee"
     t.index ["user_id"], name: "index_tenders_on_user_id"
   end
 
@@ -67,6 +84,7 @@ ActiveRecord::Schema.define(version: 2019_12_24_095340) do
   end
 
   add_foreign_key "doc1s", "tenders"
+  add_foreign_key "doc1s", "users"
   add_foreign_key "docs1s", "tenders"
   add_foreign_key "tenders", "users"
 end

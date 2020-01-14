@@ -1,0 +1,90 @@
+<%= form_with(model: conversation, local: true) do |form| %>
+  <% if conversation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conversation.errors.count, "error") %> prohibited this conversation from being saved:</h2>
+
+      <ul>
+        <% conversation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%if conversation.sender_id.nil? || conversation.sender_id == current_user.id %>
+ 
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receiver_id %>
+    <%= form.select(:receiver_id , User.where.not(id: current_user).collect { |user| [ user.email, user.id ] }, {selected: conversation.receiver_id}, {class: "ui dropdown search"} ) %>
+  </div>
+ <div class="field">
+    <%= form.label :tender_id %>
+    <%= form.select(:tender_id , Tender.all.collect { |tender| [ tender.title, tender.id ] }, {selected: conversation.tender_id}, {class: "ui dropdown search"} ) %>
+  </div>
+
+<div class="field">
+    <%= form.label :type_of_message %>
+    <% types = { "Notification" => 1,
+      "Approval" => 2,
+      "Nomination" => 3,
+    }%>
+    <fieldset>
+      <% opts = types.sort  %>
+      <% opts.each do |opa|%>
+        <%= form.radio_button :type_of_message , opa[1] %>
+        <label for="<%= opa[1]%>"> <%= opa[0]%> </label>
+      <%end%>
+    </fieldset>
+  </div>
+<% else %>
+<h2>
+<%= conversation.title%></h2>
+<%= conversation.body%>
+<% end %>
+<%if conversation.type_of_message == 2  && current_user.id == conversation.receiver_id%>
+    <div class="field">
+    <%= form.label :Approval %>
+    <% types = { "Approved" => 0,
+      "Not Approved" => 1,
+    }%>
+    <fieldset>
+      <% opts = types.sort  %>
+      <% opts.each do |opa|%>
+        <%= form.radio_button :type_of_message , opa[1] %>
+        <label for="<%= opa[1]%>"> <%= opa[0]%> </label>
+      <%end%>
+    </fieldset>
+  </div>
+  </div>
+<%end%>
+
+<%if current_user.id==conversation.receiver_id%>
+  <div class="field">
+    <%= form.label :remark %>
+    <%= form.text_field :remark %>
+  </div>
+<%else%>
+<%= conversation.remark %>
+<%end%>
+
+
+<%if conversation.type_of_message == 3  %>
+    <div class="field">
+    <%= form.label 'Nominee' %>
+   <%= form.select(:nominee , User.all.collect { |user| [ user.email, user.id ] }, {selected: conversation.nominee}, {class: "ui dropdown search"} ) %>    
+<%end%>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

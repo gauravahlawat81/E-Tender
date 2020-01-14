@@ -4,20 +4,21 @@ class Ability
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
-       if user.admin?
+        if user.admin?
          can :manage, :all
        else
          can :manage, Tender do |tender|
-            tender.user_id == user.id
+            tender.user_id == user.id && tender.locked? ==false
           end
         can :read , Tender do |tender|
             tender.user_id == user.id || tender.published? == true
           end
-        #can :manage , Doc1 do |doc|
-        #  User.where(id: Tender.where(id: doc.tender_id).select(:user_id)) == user.id
-        #end 
+        can :manage , Doc1 do |doc|
+            doc.user_id == user.id && doc.locked? ==false
+          end 
         can :index , :all
-        can :create, :all
+        can :create, Tender
+        can :create, Doc1
        end
     #
     # The first argument to `can` is the action you are giving the user
