@@ -1,0 +1,49 @@
+<%= form_for([@doc2.tender, @doc2]) do |f| %>
+  <% if @doc2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doc2.errors.count, "error") %> prohibited this doc2 from being saved:</h2>
+
+      <ul>
+      <% @doc2.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :debit_head %><br />
+    <%= f.text_field :debit_head %>
+  </div>
+  <div class="field">
+    <%= f.label :item_name %><br />
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_cost %><br />
+    <%= f.number_field :estimated_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :venue %><br />
+    <%= f.text_field :venue %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

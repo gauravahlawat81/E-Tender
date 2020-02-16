@@ -1,0 +1,18 @@
+<%= form_for([@doc9.tender, @doc9]) do |f| %>
+  <% if @doc9.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doc9.errors.count, "error") %> prohibited this doc9 from being saved:</h2>
+
+      <ul>
+      <% @doc9.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

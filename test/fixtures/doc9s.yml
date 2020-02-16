@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tender: one
+  debit_head: MyString
+  item_name: MyString
+  type: 
+  number_bids_received: 1
+  number_bidder_representative: 1
+  number_of_bids_accepted: 1
+  name_of_accepted_firms: MyText
+  number_of_bids_rejected: 1
+  name_of_rejected_firms: MyText
+  date_of_financial_bid_opening: 2020-02-16
+
+two:
+  tender: two
+  debit_head: MyString
+  item_name: MyString
+  type: 
+  number_bids_received: 1
+  number_bidder_representative: 1
+  number_of_bids_accepted: 1
+  name_of_accepted_firms: MyText
+  number_of_bids_rejected: 1
+  name_of_rejected_firms: MyText
+  date_of_financial_bid_opening: 2020-02-16
