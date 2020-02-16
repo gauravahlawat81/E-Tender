@@ -1,6 +1,6 @@
 class Doc6sController < ApplicationController
   before_action :set_tender
-  before_action :set_doc6, only: [:show, :edit, :update, :destroy]
+  before_action :set_doc6, only: [:show, :edit, :update, :destroy,:download]
 
   # GET tenders/1/doc6s
   def index
@@ -18,6 +18,25 @@ class Doc6sController < ApplicationController
 
   # GET tenders/1/doc6s/1/edit
   def edit
+  end
+
+
+  def download
+    @doc2s = @tender.doc5s
+    @doc1s=  @tender.doc1s
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "DOC6",
+        page_size: 'A4',
+        template: "doc6s/download.pdf.erb",
+        layout: "application.html.erb",
+        orientation: "Portrait",
+        lowquality: true,
+        zoom: 1,
+        dpi: 75
+      end
+    end    
   end
 
   # POST tenders/1/doc6s
@@ -59,6 +78,6 @@ class Doc6sController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def doc6_params
-      params.require(:doc6).permit(:debit_head, :item_name, :type, :number_bids_received, :number_bidder_representative, :number_of_bids_accepted, :name_of_accepted_firms, :number_of_bids_rejected, :name_of_rejected_firms, :date_of_financial_bid_opening)
+      params.require(:doc6).permit(:number_bids_received, :number_bidder_representative, :number_of_bids_accepted, :name_of_accepted_firms, :number_of_bids_rejected, :name_of_rejected_firms, :date_of_financial_bid_opening)
     end
 end
