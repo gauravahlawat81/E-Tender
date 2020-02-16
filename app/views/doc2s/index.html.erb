@@ -2,14 +2,6 @@
 
 <table>
   <tr>
-    <th>Debit head</th>
-    <th>Item name</th>
-    <th>Type</th>
-    <th>Quantity</th>
-    <th>Estimated cost</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Venue</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +9,6 @@
 
 <% @doc2s.each do |doc2| %>
   <tr>
-    <td><%= doc2.debit_head %></td>
-    <td><%= doc2.item_name %></td>
-    <td><%= doc2.type %></td>
-    <td><%= doc2.quantity %></td>
-    <td><%= doc2.estimated_cost %></td>
-    <td><%= doc2.date %></td>
-    <td><%= doc2.time %></td>
-    <td><%= doc2.venue %></td>
     <td><%= link_to 'Show', [doc2.tender, doc2] %></td>
     <td><%= link_to 'Edit', edit_tender_doc2_path(doc2.tender, doc2) %></td>
     <td><%= link_to 'Destroy', [doc2.tender, doc2], method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,5 +17,8 @@
 </table>
 
 <br />
-
+<%= link_to 'Back to all docs ', tender_path(@tender.id)%>
+<br />
+<% if Doc2.where(tender_id: @tender.id).count == 0%>
 <%= link_to 'New Doc2', new_tender_doc2_path(params[:tender_id]) %>
+<% end %>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :tenders do
-    resources :doc2s
+    resources :doc2s do
+      member do
+        get :download
+      end
+    end
   end
   resources :tenders do
     resources :doc10s do

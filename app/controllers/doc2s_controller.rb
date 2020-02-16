@@ -1,6 +1,6 @@
 class Doc2sController < ApplicationController
   before_action :set_tender
-  before_action :set_doc2, only: [:show, :edit, :update, :destroy]
+  before_action :set_doc2, only: [:show, :edit, :update, :destroy,:download]
 
   # GET tenders/1/doc2s
   def index
@@ -18,6 +18,25 @@ class Doc2sController < ApplicationController
 
   # GET tenders/1/doc2s/1/edit
   def edit
+  end
+
+
+  def download
+    @doc2s = @tender.doc5s
+    @doc1s=  @tender.doc1s
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "DOC2",
+        page_size: 'A4',
+        template: "doc2s/download.pdf.erb",
+        layout: "application.html.erb",
+        orientation: "Portrait",
+        lowquality: true,
+        zoom: 1,
+        dpi: 75
+      end
+    end    
   end
 
   # POST tenders/1/doc2s
@@ -59,6 +78,6 @@ class Doc2sController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def doc2_params
-      params.require(:doc2).permit(:debit_head, :item_name, :type, :quantity, :estimated_cost, :date, :time, :venue)
+      
     end
 end
