@@ -1,0 +1,41 @@
+<h1>Listing doc6s</h1>
+
+<table>
+  <tr>
+    <th>Debit head</th>
+    <th>Item name</th>
+    <th>Type</th>
+    <th>Number bids received</th>
+    <th>Number bidder representative</th>
+    <th>Number of bids accepted</th>
+    <th>Name of accepted firms</th>
+    <th>Number of bids rejected</th>
+    <th>Name of rejected firms</th>
+    <th>Date of financial bid opening</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doc6s.each do |doc6| %>
+  <tr>
+    <td><%= doc6.debit_head %></td>
+    <td><%= doc6.item_name %></td>
+    <td><%= doc6.type %></td>
+    <td><%= doc6.number_bids_received %></td>
+    <td><%= doc6.number_bidder_representative %></td>
+    <td><%= doc6.number_of_bids_accepted %></td>
+    <td><%= doc6.name_of_accepted_firms %></td>
+    <td><%= doc6.number_of_bids_rejected %></td>
+    <td><%= doc6.name_of_rejected_firms %></td>
+    <td><%= doc6.date_of_financial_bid_opening %></td>
+    <td><%= link_to 'Show', [doc6.tender, doc6] %></td>
+    <td><%= link_to 'Edit', edit_tender_doc6_path(doc6.tender, doc6) %></td>
+    <td><%= link_to 'Destroy', [doc6.tender, doc6], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doc6', new_tender_doc6_path(params[:tender_id]) %>

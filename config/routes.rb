@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :tenders do
+    resources :doc6s
+  end
+  resources :tenders do
+    resources :doc5s do
+      member do
+        get :download
+      end
+    end
+  end
   resources :conversations
   resources :tenders do
     resources :doc1s do

@@ -1,4 +1,6 @@
 class Tender < ApplicationRecord
+  has_many :doc6s
+  has_many :doc5s
   has_many :doc1s
 	belongs_to :user
 	enum status: { draft: 0, published: 1,locked: 2}

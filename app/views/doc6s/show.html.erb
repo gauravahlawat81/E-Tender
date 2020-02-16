@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Debit head:</b>
+  <%= @doc6.debit_head %>
+</p>
+
+<p>
+  <b>Item name:</b>
+  <%= @doc6.item_name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @doc6.type %>
+</p>
+
+<p>
+  <b>Number bids received:</b>
+  <%= @doc6.number_bids_received %>
+</p>
+
+<p>
+  <b>Number bidder representative:</b>
+  <%= @doc6.number_bidder_representative %>
+</p>
+
+<p>
+  <b>Number of bids accepted:</b>
+  <%= @doc6.number_of_bids_accepted %>
+</p>
+
+<p>
+  <b>Name of accepted firms:</b>
+  <%= @doc6.name_of_accepted_firms %>
+</p>
+
+<p>
+  <b>Number of bids rejected:</b>
+  <%= @doc6.number_of_bids_rejected %>
+</p>
+
+<p>
+  <b>Name of rejected firms:</b>
+  <%= @doc6.name_of_rejected_firms %>
+</p>
+
+<p>
+  <b>Date of financial bid opening:</b>
+  <%= @doc6.date_of_financial_bid_opening %>
+</p>
+
+
+<%= link_to 'Edit', edit_tender_doc6_path(@doc6.tender, @doc6) %> |
+<%= link_to 'Back', tender_doc6s_path(@doc6.tender) %>
