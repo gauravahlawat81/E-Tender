@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_16_133422) do
+ActiveRecord::Schema.define(version: 2020_02_16_143324) do
 
   create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
@@ -73,6 +73,21 @@ ActiveRecord::Schema.define(version: 2020_02_16_133422) do
     t.index ["tender_id"], name: "index_doc6s_on_tender_id"
   end
 
+  create_table "doc7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "quantity"
+    t.integer "estimated_cost"
+    t.date "date"
+    t.time "time"
+    t.string "venue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc7s_on_tender_id"
+  end
+
   create_table "docs1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tender_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -119,6 +134,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_133422) do
   add_foreign_key "doc1s", "users"
   add_foreign_key "doc5s", "tenders"
   add_foreign_key "doc6s", "tenders"
+  add_foreign_key "doc7s", "tenders"
   add_foreign_key "docs1s", "tenders"
   add_foreign_key "tenders", "users"
 end

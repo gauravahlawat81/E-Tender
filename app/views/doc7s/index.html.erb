@@ -1,0 +1,22 @@
+<h1>Listing doc7s</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doc7s.each do |doc7| %>
+  <tr>
+    <td><%= link_to 'Show', [doc7.tender, doc7] %></td>
+    <td><%= link_to 'Edit', edit_tender_doc7_path(doc7.tender, doc7) %></td>
+    <td><%= link_to 'Destroy', [doc7.tender, doc7], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'Back to all docs ', tender_path(@tender.id)%>
+<br />
+<% if Doc7.where(tender_id: @tender.id).count == 0%>
+<%= link_to 'New Doc7', new_tender_doc7_path(params[:tender_id]) %>
+<% end %>

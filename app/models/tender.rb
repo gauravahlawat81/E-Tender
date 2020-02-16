@@ -1,4 +1,5 @@
 class Tender < ApplicationRecord
+  has_many :doc7s
   has_many :doc6s
   has_many :doc5s
   has_many :doc1s
