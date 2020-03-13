@@ -1,0 +1,45 @@
+<%= form_for([@doc6.tender, @doc6]) do |f| %>
+  <% if @doc6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doc6.errors.count, "error") %> prohibited this doc6 from being saved:</h2>
+
+      <ul>
+      <% @doc6.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number_bids_received %><br />
+    <%= f.number_field :number_bids_received %>
+  </div>
+  <div class="field">
+    <%= f.label :number_bidder_representative %><br />
+    <%= f.number_field :number_bidder_representative %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_bids_accepted %><br />
+    <%= f.number_field :number_of_bids_accepted %>
+  </div>
+  <div class="field">
+    <%= f.label :name_of_accepted_firms %><br />
+    <%= f.text_area :name_of_accepted_firms %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_bids_rejected %><br />
+    <%= f.number_field :number_of_bids_rejected %>
+  </div>
+  <div class="field">
+    <%= f.label :name_of_rejected_firms %><br />
+    <%= f.text_area :name_of_rejected_firms %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_financial_bid_opening %><br />
+    <%= f.date_select :date_of_financial_bid_opening %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
