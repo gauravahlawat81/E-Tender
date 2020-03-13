@@ -8,7 +8,7 @@ class User < ApplicationRecord
          validates_presence_of :first_name,:last_name 
 	after_create:send_mail
   def send_mail
-    UserMailer.with(user:self).welcome_email.deliver_now!
+    UserMailer.with(user:self).welcome_email.deliver_later!
   end
   def first
 		self.first_name
