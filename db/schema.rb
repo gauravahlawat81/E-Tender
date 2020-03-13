@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_191615) do
+ActiveRecord::Schema.define(version: 2020_02_16_152819) do
 
   create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
@@ -26,6 +26,21 @@ ActiveRecord::Schema.define(version: 2020_01_13_191615) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "doc10s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "quantity"
+    t.integer "estimated_cost"
+    t.date "date"
+    t.time "time"
+    t.string "venue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc10s_on_tender_id"
+  end
+
   create_table "doc1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tender_id", null: false
     t.string "debit_head", default: "", null: false
@@ -39,6 +54,85 @@ ActiveRecord::Schema.define(version: 2020_01_13_191615) do
     t.bigint "user_id", null: false
     t.index ["tender_id"], name: "index_doc1s_on_tender_id"
     t.index ["user_id"], name: "fk_rails_9c427b3d8b"
+  end
+
+  create_table "doc2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "quantity"
+    t.integer "estimated_cost"
+    t.date "date"
+    t.time "time"
+    t.string "venue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc2s_on_tender_id"
+  end
+
+  create_table "doc5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "quantity"
+    t.integer "estimated_cost"
+    t.date "date"
+    t.time "time"
+    t.string "venue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc5s_on_tender_id"
+  end
+
+  create_table "doc6s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "number_bids_received"
+    t.integer "number_bidder_representative"
+    t.integer "number_of_bids_accepted"
+    t.text "name_of_accepted_firms"
+    t.integer "number_of_bids_rejected"
+    t.text "name_of_rejected_firms"
+    t.date "date_of_financial_bid_opening"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc6s_on_tender_id"
+  end
+
+  create_table "doc7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "quantity"
+    t.integer "estimated_cost"
+    t.date "date"
+    t.time "time"
+    t.string "venue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc7s_on_tender_id"
+  end
+
+  create_table "doc9s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tender_id", null: false
+    t.string "debit_head"
+    t.string "item_name"
+    t.string "type"
+    t.integer "number_bids_received"
+    t.integer "number_bidder_representative"
+    t.integer "number_of_bids_accepted"
+    t.text "name_of_accepted_firms"
+    t.integer "number_of_bids_rejected"
+    t.text "name_of_rejected_firms"
+    t.date "date_of_financial_bid_opening"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tender_id"], name: "index_doc9s_on_tender_id"
   end
 
   create_table "docs1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -83,8 +177,14 @@ ActiveRecord::Schema.define(version: 2020_01_13_191615) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "doc10s", "tenders"
   add_foreign_key "doc1s", "tenders"
   add_foreign_key "doc1s", "users"
+  add_foreign_key "doc2s", "tenders"
+  add_foreign_key "doc5s", "tenders"
+  add_foreign_key "doc6s", "tenders"
+  add_foreign_key "doc7s", "tenders"
+  add_foreign_key "doc9s", "tenders"
   add_foreign_key "docs1s", "tenders"
   add_foreign_key "tenders", "users"
 end
